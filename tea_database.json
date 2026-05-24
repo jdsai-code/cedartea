@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "lastUpdated": "2026-05-23",
+    "site": "https://sites.google.com/view/cedarteasdc/tea",
+    "legend": {
+      "status": ["in_stock", "low", "none", "archived"],
+      "worth_ordering_again": "marked with * on the site"
+    }
+  },
+  "categories": {
+    "traditional_black": {
+      "label": "Traditional Black",
+      "teas": [
+        {
+          "id": "honey_black",
+          "name": "Farmer Chang's Honey Black",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Teas",
+          "price_per_oz": 7.50,
+          "price_per_cup": 0.60,
+          "description": "Called \"Honey Fragrance\" black tea in Taiwan, this tea brews up notes of honey and cinnamon in a lighter but smooth and flavorful cup. Single steep 3-5 min.",
+          "notes": "Strong and malty; very enjoyable but don't oversteep. Good only for a single steep.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "red_jade_black",
+          "name": "Farmer Lee's Red Jade Black",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Teas",
+          "price_per_oz": 9.00,
+          "price_per_cup": 0.72,
+          "description": "Red Jade is in a class of its own and must be approached on what it brings to the table. Think of it as a fine dark Taiwanese Oolong. It's lighter in body and not as malty as Formosa Assam but sweeter, more delicate and with a cleaner finish.",
+          "notes": "Particular taste hard to describe; may be a little off putting.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "himalayan_gold_black",
+          "name": "Himalayan Gold Black Tea",
+          "origin": "Himalayas",
+          "vendor": "Vahdam",
+          "price_per_oz": 6.37,
+          "price_per_cup": 0.51,
+          "description": "Robust, Rich & Flavory Loose Tea. Radiant blend from the Eastern Himalayas with shiny golden tips, high caffeine, and a delicate aroma.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "dian_hong",
+          "name": "Dian Hong Black",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Teas",
+          "price_per_oz": 5.00,
+          "price_per_cup": 0.40,
+          "description": "You'll find it to be a classic, delicious black tea - nice mouthfeel, a bit malty and only slightly dry.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        }
+      ]
+    },
+    "traditional_oolong": {
+      "label": "Traditional Oolong",
+      "teas": [
+        {
+          "id": "asian_beauty",
+          "name": "Asian Beauty Oolong",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Teas",
+          "price_per_oz": 7.50,
+          "price_per_cup": 0.60,
+          "description": "On the darker side of the Oolong spectrum is our Asian Beauty, a smooth, sweet, and fragrant Oolong - and Taiwan's most famous \"bug-bitten\" tea. This tea is only produced in the Summer when the leaves naturally acquire notes of honey and cinnamon from the little leaf hoppers.",
+          "notes": "Very pleasant richer oolong. Benefits from a gongfu steeping but depletes pretty rapidly.",
+          "worth_ordering_again": true,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "high_mountain_honey_oolong",
+          "name": "High Mountain Honey Oolong",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Teas",
+          "price_per_oz": 8.00,
+          "price_per_cup": 0.64,
+          "description": "Farmer Luo makes this small-batch, hand-made tea in the Alishan growing region only once per year in the Summer.",
+          "notes": "A little lighter than expected. Great entry into oolongs if you're coming from heavy blacks. Benefits from a gongfu steeping.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "dong_ding",
+          "name": "Dong Ding Oolong - Heavy Roast",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Tea",
+          "price_per_oz": 8.00,
+          "price_per_cup": 0.64,
+          "description": "Dong Ding Oolong masterfully roasted by a friend of ours in Taichung. If you like roasted oolongs, this is a great choice! Make sure to rinse this one first.",
+          "notes": "",
+          "worth_ordering_again": true,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "tieguanyin_2012",
+          "name": "2012 Roasted Tieguanyin",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Tea",
+          "price_per_oz": 7.00,
+          "price_per_cup": 0.56,
+          "description": "It has been said that this is a tea that is close to coffee. But who wants coffee? Other reviews have said it is like walking in a Redwood forest. Worth trying.",
+          "notes": "",
+          "worth_ordering_again": true,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        }
+      ]
+    },
+    "green": {
+      "label": "Green",
+      "teas": [
+        {
+          "id": "twisted_green",
+          "name": "Twisted Green",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Teas",
+          "price_per_oz": 7.00,
+          "price_per_cup": 0.56,
+          "description": "Aromatic, nutty and crisp! If you've never had fresh green tea straight from the fields you owe it to yourself to try this.",
+          "notes": "A bit grassy; optimal steep still hasn't presented itself but would steer away from gongfu.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "green_tea_of_clouds",
+          "name": "Green Tea of the Clouds",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Teas",
+          "price_per_oz": 9.50,
+          "price_per_cup": 0.76,
+          "description": "If you are a fan of our own Twisted Green, this \"Green Tea of the Clouds\" is highly recommended as it's similar in the inhale and taste profile but more delicate and even smoother.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "himalayan_green",
+          "name": "Himalayan Green",
+          "origin": "Himalayas",
+          "vendor": "Vahdam",
+          "price_per_oz": 3.86,
+          "price_per_cup": 0.30,
+          "description": "High Elevation Grown Green Tea Leaves From Himalayas | Pure Unblended Single Origin Green Loose.",
+          "notes": "A bit grassy, haven't found the good balance of steep time/water ratio.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        }
+      ]
+    },
+    "flavored": {
+      "label": "Flavored Tea",
+      "teas": [
+        {
+          "id": "moonlight_earl_grey",
+          "name": "Moonlight Earl Grey",
+          "origin": "Blended black",
+          "vendor": "Adagio Teas",
+          "price_per_oz": 3.00,
+          "price_per_cup": 0.24,
+          "description": "Earl Grey 'cream' blend. Comforting flavors of vanilla and cream combine to soften the citrus notes of traditional Earl Grey.",
+          "notes": "Consider softening with a basic black like daily darjeeling.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "cream",
+          "name": "Cream",
+          "origin": "Blended black",
+          "vendor": "Adagio Teas",
+          "price_per_oz": 3.00,
+          "price_per_cup": 0.24,
+          "description": "Sweet, inviting and warm, with a delicate creamy consistency and aroma of fresh black tea. Pleasantly brisk and very refreshing.",
+          "notes": "Consider softening with a basic black like daily darjeeling.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "masala_chai",
+          "name": "Masala Chai",
+          "origin": "Blended black",
+          "vendor": "Adagio Teas",
+          "price_per_oz": 3.33,
+          "price_per_cup": 0.26,
+          "description": "Premium Ceylon black tea with cinnamon, cardamom, cloves and ginger. In Indian culture, 'Masala' means 'a blend of spices'.",
+          "notes": "Very heavy on the spice. Consider softening with a basic black like daily darjeeling and perhaps even (perish the thought) milk and a sweetener.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        }
+      ]
+    },
+    "white": {
+      "label": "White Tea",
+      "teas": []
+    },
+    "decaf": {
+      "label": "Decaf Tea",
+      "teas": [
+        {
+          "id": "decaf_ceylon",
+          "name": "Decaf Ceylon",
+          "origin": "Blended black",
+          "vendor": "Adagio Teas",
+          "price_per_oz": 4.00,
+          "price_per_cup": 0.32,
+          "description": "Classic black tea from the island of Sri Lanka. Clean, tangy aroma, medium body, with sweet citrus notes like mandarin, and refreshing astringency.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        }
+      ]
+    },
+    "tea_bags": {
+      "label": "Tea Bags (if you must)",
+      "teas": [
+        {
+          "id": "vahdam_darjeeling_summer",
+          "name": "Vahdam Darjeeling Summer",
+          "origin": "Himalayas",
+          "vendor": "Vahdam",
+          "price_per_bag": 0.50,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "vahdam_english_breakfast",
+          "name": "Vahdam English Breakfast",
+          "origin": "",
+          "vendor": "Vahdam",
+          "price_per_bag": 0.50,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "tealeaves_english_breakfast",
+          "name": "Tealeaves English Breakfast",
+          "origin": "",
+          "vendor": "Tealeaves",
+          "price_per_bag": null,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "harney_vanilla_comoro",
+          "name": "Decaf Harney & Sons Vanilla Comoro",
+          "origin": "",
+          "vendor": "Harney & Sons",
+          "price_per_bag": 0.28,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": true,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "metz_chamomile",
+          "name": "Decaf Metz Organic Blue Nile Chamomile",
+          "origin": "",
+          "vendor": "Metz",
+          "price_per_bag": null,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "metz_peppermint",
+          "name": "Decaf Metz Organic Cascade Peppermint",
+          "origin": "",
+          "vendor": "Metz",
+          "price_per_bag": null,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "tealeaves_peppermint",
+          "name": "Decaf Tealeaves Purely Peppermint",
+          "origin": "",
+          "vendor": "Tealeaves",
+          "price_per_bag": null,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "pink_lemon_ginger",
+          "name": "Decaf Pink Lemon Ginger",
+          "origin": "",
+          "vendor": "",
+          "price_per_bag": null,
+          "description": "",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "",
+          "history": []
+        }
+      ]
+    },
+    "archived": {
+      "label": "Archived Teas (previously available)",
+      "teas": [
+        {
+          "id": "daily_darjeeling",
+          "name": "Daily Darjeeling",
+          "origin": "Himalayas",
+          "vendor": "Vahdam",
+          "price_per_oz": 1.90,
+          "price_per_cup": 0.15,
+          "description": "Well rounded with some muscatel notes. This is a basic black tea. Nice with a straight steep or as a mixer to dampen some of the strong flavored teas.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "archived",
+          "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "mixiang_honey_red_oolong",
+          "name": "\"Mixiang\" Honey Red Oolong",
+          "origin": "Taiwan",
+          "vendor": "Beautiful Taiwan Tea",
+          "price_per_oz": 11.50,
+          "price_per_cup": 0.92,
+          "description": "Red Oolong is something of a rage these days in Taiwan. It's made by fermenting the leaves as far as possible without becoming a black tea. It's distinguished by a nice reddish amber color to the tea and smooth drinkability.",
+          "notes": "Only had this in sample and now it is sold out. Should be on the lookout for the next iteration.",
+          "worth_ordering_again": true,
+          "status": "archived",
+          "quantity_notes": "",
+          "history": []
+        }
+      ]
+    }
+  }
+}
