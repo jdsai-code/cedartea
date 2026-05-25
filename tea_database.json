@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-23",
+    "lastUpdated": "2026-05-24",
     "site": "https://sites.google.com/view/cedarteasdc/tea",
     "legend": {
       "status": ["in_stock", "low", "none", "archived"],
@@ -66,6 +66,38 @@
           "status": "in_stock",
           "quantity_notes": "",
           "history": []
+        },
+        {
+          "id": "chi_lai_high_mountain_black",
+          "name": "Chi Lai High Mountain Black",
+          "origin": "Taiwan (Chi Lai Mountain, Hualien)",
+          "vendor": "Mountain Stream Teas",
+          "price_per_oz": 14.74,
+          "price_per_cup": 1.18,
+          "description": "A high mountain black tea grown at elevation on Chi Lai Mountain in Hualien County. Clean, bright, and delicately sweet with a smooth mouthfeel and none of the bitterness of lowland blacks.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $26.00/50g"}
+          ]
+        },
+        {
+          "id": "alpine_honey_red",
+          "name": "Alpine Honey Red",
+          "origin": "Taiwan",
+          "vendor": "Mountain Stream Teas",
+          "price_per_oz": 8.79,
+          "price_per_cup": 0.70,
+          "description": "A red tea (black tea) grown at alpine elevation in Taiwan, carrying natural honey notes from the high-mountain terroir. Light-bodied and sweet with a clean, lingering finish.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.50/50g"}
+          ]
         }
       ]
     },
@@ -127,6 +159,70 @@
           "status": "in_stock",
           "quantity_notes": "",
           "history": []
+        },
+        {
+          "id": "honey_black_oolong_spring2026",
+          "name": "Honey Black Oolong (Spring 2026)",
+          "origin": "Taiwan",
+          "vendor": "Mountain Stream Teas",
+          "price_per_oz": 8.50,
+          "price_per_cup": 0.68,
+          "description": "A spring 2026 harvest black oolong from Taiwan. Processed with high oxidation to yield a naturally sweet honey aroma, rich and smooth body, and a warming finish.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.00/50g"}
+          ]
+        },
+        {
+          "id": "alishan_firefly_milk_oolong",
+          "name": "Alishan Firefly Milk Oolong (Winter Pick)",
+          "origin": "Taiwan (Alishan)",
+          "vendor": "Mountain Stream Teas",
+          "price_per_oz": 8.79,
+          "price_per_cup": 0.70,
+          "description": "A winter harvest milk oolong from the celebrated Alishan high mountain region. The Firefly varietal produces a naturally creamy, buttery character with floral high notes and a lingering sweet finish.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.50/50g"}
+          ]
+        },
+        {
+          "id": "sweet_assamica_red_oolong",
+          "name": "Sweet Assamica Red Oolong",
+          "origin": "Taiwan",
+          "vendor": "Mountain Stream Teas",
+          "price_per_oz": 8.79,
+          "price_per_cup": 0.70,
+          "description": "A red oolong crafted from the large-leaf Assamica cultivar, processed with significant oxidation for a rich, full-bodied sweetness. Smooth and approachable with ripe fruit and honey notes.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.50/50g"}
+          ]
+        },
+        {
+          "id": "acacia_charcoal_roast_milk_oolong",
+          "name": "Acacia Charcoal Roast Milk Oolong",
+          "origin": "Taiwan",
+          "vendor": "Mountain Stream Teas",
+          "price_per_oz": 8.50,
+          "price_per_cup": 0.68,
+          "description": "A milk oolong roasted over acacia charcoal, adding a warm, lightly toasty complexity to the naturally creamy base. Deep and satisfying, with excellent multi-steep character.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.00/50g"}
+          ]
         }
       ]
     },
