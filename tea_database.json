@@ -312,7 +312,13 @@
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "2 oz ordered March 2026",
-          "history": []
+          "history": [
+            {
+              "date": "2026-05-27",
+              "change": "confirmed in inventory",
+              "note": "verified via Den's Tea shipment order #41127, 2 oz received March 2026"
+            }
+          ]
         },
         {
           "id": "organic_fukamushi_sencha",
@@ -326,7 +332,13 @@
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "2 oz ordered March 2026",
-          "history": []
+          "history": [
+            {
+              "date": "2026-05-27",
+              "change": "confirmed in inventory",
+              "note": "verified via Den's Tea shipment order #41127, 2 oz received March 2026"
+            }
+          ]
         },
         {
           "id": "gyokuro_kin",
@@ -340,7 +352,13 @@
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "2 oz ordered March 2026",
-          "history": []
+          "history": [
+            {
+              "date": "2026-05-27",
+              "change": "confirmed in inventory",
+              "note": "verified via Den's Tea shipment order #41127, 2 oz received March 2026"
+            }
+          ]
         }
       ]
     },
@@ -401,7 +419,13 @@
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "2 oz ordered March 2026",
-          "history": []
+          "history": [
+            {
+              "date": "2026-05-27",
+              "change": "confirmed in inventory; note added",
+              "note": "Den's Tea order #41127, 2 oz received March 2026; note added: very strong cherry blossom notes not to liking"
+            }
+          ]
         }
       ]
     },
