@@ -94,7 +94,6 @@
     .tea-list li:last-child { border-bottom: none; }
 
     .tea-name { font-weight: bold; font-size: 1rem; }
-    .tea-name.none { color: #aaa; text-decoration: line-through; }
     .star { color: #c8a000; margin-left: 3px; }
     .tag {
       display: inline-block;
@@ -107,7 +106,7 @@
     }
     .tag.low { background: #ffe0b2; color: #a05000; }
 
-    .origin, .vendor, .price, .desc, .notes {
+    .origin, .vendor, .price, .desc, .notes, .no-offerings {
       display: block;
       font-size: 0.85rem;
       margin-top: 2px;
@@ -117,6 +116,7 @@
     .price { color: #4a7a4a; }
     .desc { color: #4a3828; margin-top: 5px; }
     .notes { color: #7a6050; font-style: italic; }
+    .no-offerings { color: #9a8060; font-style: italic; }
 
     @media (max-width: 600px) {
       .section-img { float: none; width: 100%; height: 180px; margin: 0 0 14px 0; }
@@ -393,7 +393,17 @@
         </div>
       </div>
     </section>
-
+    <section class="tea-section" id="white">
+      <div class="section-inner clearfix">
+        <img src="images/whitetea.png" alt="White Tea" class="section-img" />
+        <div class="section-text">
+          <h2>White Tea</h2>
+          <ul class="tea-list">
+      <li><span class="no-offerings">No current offerings &#8212; check back soon</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section class="tea-section" id="decaf">
       <div class="section-inner clearfix">
         <img src="images/decaf.png" alt="Decaf Tea" class="section-img" />
@@ -460,10 +470,23 @@
       <div class="section-inner clearfix">
         <img src="images/archivedtea.png" alt="Archived Teas" class="section-img" />
         <div class="section-text">
-          <h2>Archived / None Left</h2>
+          <h2>Archived Teas (previously available)</h2>
           <ul class="tea-list">
-        <li><span class="tea-name none">Daily Darjeeling</span></li>
-        <li><span class="tea-name none">"Mixiang" Honey Red Oolong</span> — Only had this in sample and now it is sold out. Should be on the lookout for the next iteration.</li>
+      <li>
+        <span class="tea-name">Daily Darjeeling</span>
+        <span class="origin">Himalayas</span>
+        <span class="vendor">Vahdam</span>
+        <span class="price">$1.90/oz (about $0.15 per cup)</span>
+        <span class="desc">Well rounded with some muscatel notes. This is a basic black tea. Nice with a straight steep or as a mixer to dampen some of the strong flavored teas.</span>
+      </li>
+      <li>
+        <span class="tea-name">"Mixiang" Honey Red Oolong <span class="star">&#9733;</span></span>
+        <span class="origin">Taiwan</span>
+        <span class="vendor">Beautiful Taiwan Tea</span>
+        <span class="price">$11.50/oz (about $0.92 per cup)</span>
+        <span class="desc">Red Oolong is something of a rage these days in Taiwan. It's made by fermenting the leaves as far as possible without becoming a black tea. It's distinguished by a nice reddish amber color to the tea and smooth drinkability.</span>
+        <span class="notes">Notes: Only had this in sample and now it is sold out. Should be on the lookout for the next iteration.</span>
+      </li>
           </ul>
         </div>
       </div>
