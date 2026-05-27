@@ -1,184 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cedar Tea SDC — Tea Selection</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cedar Tea Collection</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Georgia, serif; background: #faf8f5; color: #2c2c2c; line-height: 1.6; }
-    .hero { position: relative; min-height: 340px; background-image: url('images/topbanner.png'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.22); }
-    .hero-inner { position: relative; z-index: 1; text-align: center; color: #fff; padding: 40px 20px; }
-    .hero-inner h1 { font-size: 2.6em; letter-spacing: 0.04em; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
-    .hero-inner p { font-size: 1.1em; opacity: 0.9; margin: 4px 0; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
-    .legend { background: #f0ebe3; border-bottom: 1px solid #d4c9b8; padding: 10px 32px; font-size: 0.9em; display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
-    .tag.low { background: #e8a020; color: #fff; padding: 2px 7px; border-radius: 3px; font-size: 0.85em; }
-    main { max-width: 900px; margin: 0 auto; padding: 20px 24px 40px; }
-    .tea-section { margin-bottom: 44px; padding-bottom: 28px; border-bottom: 1px solid #e0d8cc; }
-    .tea-section::after { content: ''; display: table; clear: both; }
-    .section-img { float: left; width: 340px; margin: 0 36px 20px 0; }
-    .section-img img { width: 100%; height: 220px; object-fit: cover; border-radius: 4px; display: block; }
-    .tea-section h2 { font-size: 1.45em; color: #5c3d1e; margin-bottom: 12px; }
-    .tea-section ul { list-style: none; padding: 0; }
-    .tea-section li { margin-bottom: 14px; font-size: 0.97em; }
-    .star { color: #c8830a; }
-    .desc { display: block; color: #555; font-size: 0.93em; margin-top: 3px; font-style: italic; }
-    .notes { display: block; color: #888; font-size: 0.88em; margin-top: 2px; }
-    .empty { color: #888; font-style: italic; }
-    .archived-section { max-width: 900px; margin: 0 auto 40px; padding: 24px; background: #f5f0e8; border: 1px solid #ddd4c4; border-radius: 4px; }
-    .archived-section::after { content: ''; display: table; clear: both; }
-    .archived-section .section-img { float: left; width: 200px; margin: 0 28px 12px 0; }
-    .archived-section .section-img img { width: 100%; height: 140px; object-fit: cover; border-radius: 4px; }
-    .archived-section h2 { font-size: 1.2em; color: #7a6040; margin-bottom: 10px; }
-    .archived-section ul { list-style: disc; padding-left: 20px; color: #777; font-size: 0.9em; }
-    .archived-section li { margin-bottom: 8px; }
-    .footer { text-align: center; padding: 20px; color: #999; font-size: 0.85em; border-top: 1px solid #e0d8cc; }
-    .footer a { color: #7a6040; }
-    @media (max-width: 640px) {
-      .section-img { float: none; width: 100%; margin: 0 0 16px 0; }
-      .section-img img { height: 180px; }
-      .archived-section .section-img { float: none; width: 100%; }
+    body { font-family: Georgia, serif; background: #faf7f2; color: #3b2a1a; }
+
+    /* Hero Banner */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('images/topbanner.png') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.22);
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+      margin-bottom: 0.4em;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      max-width: 540px;
+    }
+
+    /* Legend */
+    .legend {
+      background: #f0e8d8;
+      border-bottom: 1px solid #d4c4a0;
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      color: #6b4c2a;
+      display: flex; flex-wrap: wrap; gap: 18px;
+    }
+    .legend span { display: flex; align-items: center; gap: 5px; }
+
+    /* Sections */
+    .tea-section {
+      border-bottom: 1px solid #e0d0b0;
+      padding: 28px 24px;
+    }
+    .tea-section:last-child { border-bottom: none; }
+
+    .clearfix::after {
+      content: ""; display: table; clear: both;
+    }
+    .section-img {
+      float: left;
+      width: 340px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin: 0 24px 16px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .section-text h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #5c3a1e;
+      border-bottom: 2px solid #c8a96e;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+
+    /* Tea List */
+    .tea-list { list-style: none; }
+    .tea-list li {
+      padding: 9px 0;
+      border-bottom: 1px dotted #d4c4a0;
+      line-height: 1.5;
+    }
+    .tea-list li:last-child { border-bottom: none; }
+
+    .tea-name { font-weight: bold; font-size: 1rem; }
+    .tea-name.none { color: #aaa; text-decoration: line-through; }
+    .star { color: #c8a000; margin-left: 3px; }
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: bold;
+      border-radius: 3px;
+      padding: 1px 5px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .tag.low { background: #ffe0b2; color: #a05000; }
+
+    .origin, .price, .desc, .notes {
+      display: block;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+    .origin { color: #7a5c38; font-style: italic; }
+    .price { color: #4a7a4a; }
+    .desc { color: #4a3828; }
+    .notes { color: #7a6050; }
+
+    @media (max-width: 600px) {
+      .section-img { float: none; width: 100%; height: 180px; margin: 0 0 14px 0; }
+      .hero-content h1 { font-size: 1.9rem; }
     }
   </style>
 </head>
 <body>
-
-  <div class="hero">
-    <div class="hero-inner">
-      <h1>Tea Selection</h1>
-      <p>See What You're Feeling, What You're Not</p>
-      <p>★ Worth Ordering Again</p>
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Cedar Tea Collection</h1>
+      <p>Our home tea inventory &#8212; teas we&#8217;ve tried and loved</p>
     </div>
-  </div>
+  </header>
 
   <div class="legend">
-    <span>★ Worth Ordering Again</span>
+    <span>&#9733; Worth Ordering Again</span>
     <span><span class="tag low">Running low</span> = almost gone</span>
   </div>
 
   <main>
-  <section class="tea-section">
-    <div class="section-img"><img src="images/blacktea.png" alt="Traditional Black"></div>
-    <h2>Traditional Black</h2>
-    <ul>
-      <li><strong>Farmer Chang's Honey Black</strong>, <em>Taiwan</em>, Beautiful Taiwan Teas, $7.50/oz (about $0.60 per cup)<br>
+    <section class="tea-section" id="traditional_black">
+      <div class="section-inner clearfix">
+        <img src="images/blacktea.png" alt="Black Tea" class="section-img" />
+        <div class="section-text">
+          <h2>Traditional Black</h2>
+          <ul class="tea-list">
+      <li>
+        <span class="tea-name">Farmer Chang's Honey Black</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$7.50/oz (about $0.60 per cup)</span>
         <span class="desc">Called "Honey Fragrance" black tea in Taiwan, this tea brews up notes of honey and cinnamon in a lighter but smooth and flavorful cup. Single steep 3-5 min.</span>
-        <span class="notes">Notes: Strong and malty; very enjoyable but don't oversteep. Good only for a single steep.</span></li>
-      <li><strong>Farmer Lee's Red Jade Black</strong>, <em>Taiwan</em>, Beautiful Taiwan Teas, $9.00/oz (about $0.72 per cup)<br>
+        <span class="notes">Notes: Strong and malty; very enjoyable but don't oversteep. Good only for a single steep.</span>
+      </li>
+      <li>
+        <span class="tea-name">Farmer Lee's Red Jade Black</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$9.00/oz (about $0.72 per cup)</span>
         <span class="desc">Red Jade is in a class of its own and must be approached on what it brings to the table. Think of it as a fine dark Taiwanese Oolong. It's lighter in body and not as malty as Formosa Assam but sweeter, more delicate and with a cleaner finish.</span>
-        <span class="notes">Notes: Particular taste hard to describe; may be a little off putting.</span></li>
-      <li><strong>Himalayan Gold Black Tea</strong>, <em>Himalayas</em>, Vahdam, $6.37/oz (about $0.51 per cup)<br>
-        <span class="desc">Robust, Rich & Flavory Loose Tea. Radiant blend from the Eastern Himalayas with shiny golden tips, high caffeine, and a delicate aroma.</span></li>
-      <li><strong>Dian Hong Black</strong>, <em>Taiwan</em>, Beautiful Taiwan Teas, $5.00/oz (about $0.40 per cup)<br>
-        <span class="desc">You'll find it to be a classic, delicious black tea - nice mouthfeel, a bit malty and only slightly dry.</span></li>
-      <li><strong>Chi Lai High Mountain Black</strong>, <em>Taiwan (Chi Lai Mountain, Hualien)</em>, Mountain Stream Teas, $14.74/oz (about $1.18 per cup)<br>
-        <span class="desc">A high mountain black tea grown at elevation on Chi Lai Mountain in Hualien County. Clean, bright, and delicately sweet with a smooth mouthfeel and none of the bitterness of lowland blacks.</span></li>
-      <li><strong>Alpine Honey Red</strong>, <em>Taiwan</em>, Mountain Stream Teas, $8.79/oz (about $0.70 per cup)<br>
-        <span class="desc">A red tea (black tea) grown at alpine elevation in Taiwan, carrying natural honey notes from the high-mountain terroir. Light-bodied and sweet with a clean, lingering finish.</span></li>
-    </ul>
-  </section>
-  <section class="tea-section">
-    <div class="section-img"><img src="images/oolong.png" alt="Traditional Oolong"></div>
-    <h2>Traditional Oolong</h2>
-    <ul>
-      <li><strong>Asian Beauty Oolong</strong> <span class="star">★</span>, <em>Taiwan</em>, Beautiful Taiwan Teas, $7.50/oz (about $0.60 per cup)<br>
+        <span class="notes">Notes: Particular taste hard to describe; may be a little off putting.</span>
+      </li>
+      <li>
+        <span class="tea-name">Himalayan Gold Black Tea</span>
+        <span class="origin">Himalayas</span>
+        <span class="price">$6.37/oz (about $0.51 per cup)</span>
+        <span class="desc">Robust, Rich & Flavory Loose Tea. Radiant blend from the Eastern Himalayas with shiny golden tips, high caffeine, and a delicate aroma.</span>
+      </li>
+      <li>
+        <span class="tea-name">Dian Hong Black</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$5.00/oz (about $0.40 per cup)</span>
+        <span class="desc">You'll find it to be a classic, delicious black tea - nice mouthfeel, a bit malty and only slightly dry.</span>
+      </li>
+      <li>
+        <span class="tea-name">Chi Lai High Mountain Black</span>
+        <span class="origin">Taiwan (Chi Lai Mountain, Hualien)</span>
+        <span class="price">$14.74/oz (about $1.18 per cup)</span>
+        <span class="desc">A high mountain black tea grown at elevation on Chi Lai Mountain in Hualien County. Clean, bright, and delicately sweet with a smooth mouthfeel and none of the bitterness of lowland blacks.</span>
+      </li>
+      <li>
+        <span class="tea-name">Alpine Honey Red</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$8.79/oz (about $0.70 per cup)</span>
+        <span class="desc">A red tea (black tea) grown at alpine elevation in Taiwan, carrying natural honey notes from the high-mountain terroir. Light-bodied and sweet with a clean, lingering finish.</span>
+      </li>
+      <li>
+        <span class="tea-name">Assam Chota Tingrai Summer Black</span>
+        <span class="origin">Assam, India (Tinsukia district)</span>
+        <span class="price">$4.57/oz (about $0.32 per cup)</span>
+        <span class="desc">Rich, full-bodied, brisk and malty black tea with cocoa undertones. From a fourth-generation family estate established in 1943 in Tinsukia district of Assam.</span>
+      </li>
+      <li>
+        <span class="tea-name">Darjeeling Upper Namring Spring Clonal Black</span>
+        <span class="origin">Darjeeling, India (Namring estate, est. 1855)</span>
+        <span class="price">$23.52/oz (about $1.60 per cup)</span>
+        <span class="desc">Delicate, luminous limited-edition black tea from Namring estate. AV2 clonal cultivar balancing sweet floral elegance with a smooth, refreshing finish. Floral and geranium aroma with green apple peel; light-bodied and silken smooth with white lily, muskmelon, and crisp mineral finish.</span>
+      </li>
+      <li>
+        <span class="tea-name">Assam Doomni Gold Summer Black</span>
+        <span class="origin">Assam, India (Doomni estate, Baksa district)</span>
+        <span class="price">$5.14/oz (about $0.36 per cup)</span>
+        <span class="desc">Bold Assam with rich malty notes, sweet-honeyed aroma, and a touch of cocoa. Fine whole leaves with golden tips from Doomni Estate in the Baksa district. HACCP, ISO 9001, and Rainforest Alliance certified.</span>
+      </li>
+      <li>
+        <span class="tea-name">Darjeeling Jungpana Autumn Chinary Black</span>
+        <span class="origin">Darjeeling, India (Jungpana estate, Kurseong Valley, est. 1899)</span>
+        <span class="price">$4.99/oz (about $0.34 per cup)</span>
+        <span class="desc">Mellow autumnal Darjeeling from Jungpana estate, perched at 4,500 feet in Kurseong Valley. Medium-bodied with bright stone-fruity sweetness, subtle nutty nuances, and light cedar notes settling into a lingering, comforting finish.</span>
+      </li>
+      <li>
+        <span class="tea-name">Darjeeling Makaibari Summer Clonal Black</span>
+        <span class="origin">Darjeeling, India (Makaibari estate, Kurseong, est. 1852)</span>
+        <span class="price">$12.35/oz (about $0.84 per cup)</span>
+        <span class="desc">Lush, layered, and delicately sweet from the world's oldest tea estate (est. 1852), home to the first tea factory (built 1859). Pioneer of organic and biodynamic cultivation. Notes of sweet grapes, stone fruit, and chestnut weave into a smooth, lingering cup.</span>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="tea-section" id="traditional_oolong">
+      <div class="section-inner clearfix">
+        <img src="images/oolong.png" alt="Oolong Tea" class="section-img" />
+        <div class="section-text">
+          <h2>Traditional Oolong</h2>
+          <ul class="tea-list">
+      <li>
+        <span class="tea-name">Asian Beauty Oolong <span class="star">&#9733;</span></span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$7.50/oz (about $0.60 per cup)</span>
         <span class="desc">On the darker side of the Oolong spectrum is our Asian Beauty, a smooth, sweet, and fragrant Oolong - and Taiwan's most famous "bug-bitten" tea. This tea is only produced in the Summer when the leaves naturally acquire notes of honey and cinnamon from the little leaf hoppers.</span>
-        <span class="notes">Notes: Very pleasant richer oolong. Benefits from a gongfu steeping but depletes pretty rapidly.</span></li>
-      <li><strong>High Mountain Honey Oolong</strong>, <em>Taiwan</em>, Beautiful Taiwan Teas, $8.00/oz (about $0.64 per cup)<br>
+        <span class="notes">Notes: Very pleasant richer oolong. Benefits from a gongfu steeping but depletes pretty rapidly.</span>
+      </li>
+      <li>
+        <span class="tea-name">High Mountain Honey Oolong</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$8.00/oz (about $0.64 per cup)</span>
         <span class="desc">Farmer Luo makes this small-batch, hand-made tea in the Alishan growing region only once per year in the Summer.</span>
-        <span class="notes">Notes: A little lighter than expected. Great entry into oolongs if you're coming from heavy blacks. Benefits from a gongfu steeping.</span></li>
-      <li><strong>Dong Ding Oolong - Heavy Roast</strong> <span class="star">★</span>, <em>Taiwan</em>, Beautiful Taiwan Tea, $8.00/oz (about $0.64 per cup)<br>
-        <span class="desc">Dong Ding Oolong masterfully roasted by a friend of ours in Taichung. If you like roasted oolongs, this is a great choice! Make sure to rinse this one first.</span></li>
-      <li><strong>2012 Roasted Tieguanyin</strong> <span class="star">★</span>, <em>Taiwan</em>, Beautiful Taiwan Tea, $7.00/oz (about $0.56 per cup)<br>
-        <span class="desc">It has been said that this is a tea that is close to coffee. But who wants coffee? Other reviews have said it is like walking in a Redwood forest. Worth trying.</span></li>
-      <li><strong>Honey Black Oolong (Spring 2026)</strong>, <em>Taiwan</em>, Mountain Stream Teas, $8.50/oz (about $0.68 per cup)<br>
-        <span class="desc">A spring 2026 harvest black oolong from Taiwan. Processed with high oxidation to yield a naturally sweet honey aroma, rich and smooth body, and a warming finish.</span></li>
-      <li><strong>Alishan Firefly Milk Oolong (Winter Pick)</strong>, <em>Taiwan (Alishan)</em>, Mountain Stream Teas, $8.79/oz (about $0.70 per cup)<br>
-        <span class="desc">A winter harvest milk oolong from the celebrated Alishan high mountain region. The Firefly varietal produces a naturally creamy, buttery character with floral high notes and a lingering sweet finish.</span></li>
-      <li><strong>Sweet Assamica Red Oolong</strong>, <em>Taiwan</em>, Mountain Stream Teas, $8.79/oz (about $0.70 per cup)<br>
-        <span class="desc">A red oolong crafted from the large-leaf Assamica cultivar, processed with significant oxidation for a rich, full-bodied sweetness. Smooth and approachable with ripe fruit and honey notes.</span></li>
-      <li><strong>Acacia Charcoal Roast Milk Oolong</strong>, <em>Taiwan</em>, Mountain Stream Teas, $8.50/oz (about $0.68 per cup)<br>
-        <span class="desc">A milk oolong roasted over acacia charcoal, adding a warm, lightly toasty complexity to the naturally creamy base. Deep and satisfying, with excellent multi-steep character.</span></li>
-    </ul>
-  </section>
-  <section class="tea-section">
-    <div class="section-img"><img src="images/greentea.png" alt="Green"></div>
-    <h2>Green</h2>
-    <ul>
-      <li><strong>Twisted Green</strong>, <em>Taiwan</em>, Beautiful Taiwan Teas, $7.00/oz (about $0.56 per cup)<br>
+        <span class="notes">Notes: A little lighter than expected. Great entry into oolongs if you're coming from heavy blacks. Benefits from a gongfu steeping.</span>
+      </li>
+      <li>
+        <span class="tea-name">Dong Ding Oolong - Heavy Roast <span class="star">&#9733;</span></span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$8.00/oz (about $0.64 per cup)</span>
+        <span class="desc">Dong Ding Oolong masterfully roasted by a friend of ours in Taichung. If you like roasted oolongs, this is a great choice! Make sure to rinse this one first.</span>
+      </li>
+      <li>
+        <span class="tea-name">2012 Roasted Tieguanyin <span class="star">&#9733;</span></span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$7.00/oz (about $0.56 per cup)</span>
+        <span class="desc">It has been said that this is a tea that is close to coffee. But who wants coffee? Other reviews have said it is like walking in a Redwood forest. Worth trying.</span>
+      </li>
+      <li>
+        <span class="tea-name">Honey Black Oolong (Spring 2026)</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$8.50/oz (about $0.68 per cup)</span>
+        <span class="desc">A spring 2026 harvest black oolong from Taiwan. Processed with high oxidation to yield a naturally sweet honey aroma, rich and smooth body, and a warming finish.</span>
+      </li>
+      <li>
+        <span class="tea-name">Alishan Firefly Milk Oolong (Winter Pick)</span>
+        <span class="origin">Taiwan (Alishan)</span>
+        <span class="price">$8.79/oz (about $0.70 per cup)</span>
+        <span class="desc">A winter harvest milk oolong from the celebrated Alishan high mountain region. The Firefly varietal produces a naturally creamy, buttery character with floral high notes and a lingering sweet finish.</span>
+      </li>
+      <li>
+        <span class="tea-name">Sweet Assamica Red Oolong</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$8.79/oz (about $0.70 per cup)</span>
+        <span class="desc">A red oolong crafted from the large-leaf Assamica cultivar, processed with significant oxidation for a rich, full-bodied sweetness. Smooth and approachable with ripe fruit and honey notes.</span>
+      </li>
+      <li>
+        <span class="tea-name">Acacia Charcoal Roast Milk Oolong</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$8.50/oz (about $0.68 per cup)</span>
+        <span class="desc">A milk oolong roasted over acacia charcoal, adding a warm, lightly toasty complexity to the naturally creamy base. Deep and satisfying, with excellent multi-steep character.</span>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="tea-section" id="green">
+      <div class="section-inner clearfix">
+        <img src="images/greentea.png" alt="Green Tea" class="section-img" />
+        <div class="section-text">
+          <h2>Green</h2>
+          <ul class="tea-list">
+      <li>
+        <span class="tea-name">Twisted Green</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$7.00/oz (about $0.56 per cup)</span>
         <span class="desc">Aromatic, nutty and crisp! If you've never had fresh green tea straight from the fields you owe it to yourself to try this.</span>
-        <span class="notes">Notes: A bit grassy; optimal steep still hasn't presented itself but would steer away from gongfu.</span></li>
-      <li><strong>Green Tea of the Clouds</strong>, <em>Taiwan</em>, Beautiful Taiwan Teas, $9.50/oz (about $0.76 per cup)<br>
-        <span class="desc">If you are a fan of our own Twisted Green, this "Green Tea of the Clouds" is highly recommended as it's similar in the inhale and taste profile but more delicate and even smoother.</span></li>
-      <li><strong>Himalayan Green</strong>, <em>Himalayas</em>, Vahdam, $3.86/oz (about $0.30 per cup)<br>
+        <span class="notes">Notes: A bit grassy; optimal steep still hasn't presented itself but would steer away from gongfu.</span>
+      </li>
+      <li>
+        <span class="tea-name">Green Tea of the Clouds</span>
+        <span class="origin">Taiwan</span>
+        <span class="price">$9.50/oz (about $0.76 per cup)</span>
+        <span class="desc">If you are a fan of our own Twisted Green, this "Green Tea of the Clouds" is highly recommended as it's similar in the inhale and taste profile but more delicate and even smoother.</span>
+      </li>
+      <li>
+        <span class="tea-name">Himalayan Green</span>
+        <span class="origin">Himalayas</span>
+        <span class="price">$3.86/oz (about $0.30 per cup)</span>
         <span class="desc">High Elevation Grown Green Tea Leaves From Himalayas | Pure Unblended Single Origin Green Loose.</span>
-        <span class="notes">Notes: A bit grassy, haven't found the good balance of steep time/water ratio.</span></li>
-      <li><strong>Sencha Shin-ryoku</strong>, <em>Honyama, Shizuoka, Japan</em>, Den's Tea, $7.32/oz (about $0.52 per cup)<br>
-        <span class="desc">Premium sencha grown at high elevation in the prestigious tea region of Honyama. First flush, Yabukita cultivar. Well-balanced between flavor and body with a natural sweetness.</span></li>
-      <li><strong>Organic Fukamushi Sencha</strong>, <em>Kakegawa, Shizuoka, Japan</em>, Den's Tea, $5.50/oz (about $0.39 per cup)<br>
-        <span class="desc">Traditional deep-steamed (fukamushi) sencha from Kakegawa. Carefully deep steamed for mild, aromatic flavor. Grown under JAS organic certification. Mild with fresh grassy and earthy aromas.</span></li>
-      <li><strong>Gyokuro Kin</strong>, <em>Asahina, Shizuoka, Japan</em>, Den's Tea, $8.55/oz (about $0.61 per cup)<br>
-        <span class="desc">A cup of affordable luxury. Shade-grown gyokuro from Asahina with the elegance of famed gyokuro teas. Gentle bitterness and umami mouthfeel that progressively becomes slightly sweet and astringent.</span></li>
-    </ul>
-  </section>
-  <section class="tea-section">
-    <div class="section-img"><img src="images/flavored.png" alt="Flavored Tea"></div>
-    <h2>Flavored Tea</h2>
-    <ul>
-      <li><strong>Moonlight Earl Grey</strong>, <em>Blended black</em>, Adagio Teas, $3.00/oz (about $0.24 per cup)<br>
+        <span class="notes">Notes: A bit grassy, haven't found the good balance of steep time/water ratio.</span>
+      </li>
+      <li>
+        <span class="tea-name">Sencha Shin-ryoku</span>
+        <span class="origin">Honyama, Shizuoka, Japan</span>
+        <span class="price">$7.32/oz (about $0.52 per cup)</span>
+        <span class="desc">Premium sencha grown at high elevation in the prestigious tea region of Honyama. First flush, Yabukita cultivar. Well-balanced between flavor and body with a natural sweetness.</span>
+      </li>
+      <li>
+        <span class="tea-name">Organic Fukamushi Sencha</span>
+        <span class="origin">Kakegawa, Shizuoka, Japan</span>
+        <span class="price">$5.50/oz (about $0.39 per cup)</span>
+        <span class="desc">Traditional deep-steamed (fukamushi) sencha from Kakegawa. Carefully deep steamed for mild, aromatic flavor. Grown under JAS organic certification. Mild with fresh grassy and earthy aromas.</span>
+      </li>
+      <li>
+        <span class="tea-name">Gyokuro Kin</span>
+        <span class="origin">Asahina, Shizuoka, Japan</span>
+        <span class="price">$8.55/oz (about $0.61 per cup)</span>
+        <span class="desc">A cup of affordable luxury. Shade-grown gyokuro from Asahina with the elegance of famed gyokuro teas. Gentle bitterness and umami mouthfeel that progressively becomes slightly sweet and astringent.</span>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="tea-section" id="flavored">
+      <div class="section-inner clearfix">
+        <img src="images/flavored.png" alt="Flavored Tea" class="section-img" />
+        <div class="section-text">
+          <h2>Flavored Tea</h2>
+          <ul class="tea-list">
+      <li>
+        <span class="tea-name">Moonlight Earl Grey</span>
+        <span class="origin">Blended black</span>
+        <span class="price">$3.00/oz (about $0.24 per cup)</span>
         <span class="desc">Earl Grey 'cream' blend. Comforting flavors of vanilla and cream combine to soften the citrus notes of traditional Earl Grey.</span>
-        <span class="notes">Notes: Consider softening with a basic black like daily darjeeling.</span></li>
-      <li><strong>Cream</strong>, <em>Blended black</em>, Adagio Teas, $3.00/oz (about $0.24 per cup)<br>
+        <span class="notes">Notes: Consider softening with a basic black like daily darjeeling.</span>
+      </li>
+      <li>
+        <span class="tea-name">Cream</span>
+        <span class="origin">Blended black</span>
+        <span class="price">$3.00/oz (about $0.24 per cup)</span>
         <span class="desc">Sweet, inviting and warm, with a delicate creamy consistency and aroma of fresh black tea. Pleasantly brisk and very refreshing.</span>
-        <span class="notes">Notes: Consider softening with a basic black like daily darjeeling.</span></li>
-      <li><strong>Masala Chai</strong>, <em>Blended black</em>, Adagio Teas, $3.33/oz (about $0.26 per cup)<br>
+        <span class="notes">Notes: Consider softening with a basic black like daily darjeeling.</span>
+      </li>
+      <li>
+        <span class="tea-name">Masala Chai</span>
+        <span class="origin">Blended black</span>
+        <span class="price">$3.33/oz (about $0.26 per cup)</span>
         <span class="desc">Premium Ceylon black tea with cinnamon, cardamom, cloves and ginger. In Indian culture, 'Masala' means 'a blend of spices'.</span>
-        <span class="notes">Notes: Very heavy on the spice. Consider softening with a basic black like daily darjeeling and perhaps even (perish the thought) milk and a sweetener.</span></li>
-      <li><strong>Sakura Ryokucha</strong>, <em>Shizuoka, Japan</em>, Den's Tea, $5.88/oz (about $0.42 per cup)<br>
+        <span class="notes">Notes: Very heavy on the spice. Consider softening with a basic black like daily darjeeling and perhaps even (perish the thought) milk and a sweetener.</span>
+      </li>
+      <li>
+        <span class="tea-name">Sakura Ryokucha</span>
+        <span class="origin">Shizuoka, Japan</span>
+        <span class="price">$5.88/oz (about $0.42 per cup)</span>
         <span class="desc">Seasonal blend of sencha, kukicha, sakura leaves and sakura flowers. Sakura flowers preserved in sugar for a subtle sweetness without affecting the tea flavor.</span>
-        <span class="notes">Notes: Very strong cherry blossom notes; not to my liking.</span></li>
-    </ul>
-  </section>
-  <section class="tea-section">
-    <div class="section-img"><img src="images/whitetea.png" alt="White Tea"></div>
-    <h2>White Tea</h2>
-    <p class="empty">No current offerings — check back soon</p>
-  </section>
-  <section class="tea-section">
-    <div class="section-img"><img src="images/decaf.png" alt="Decaf Tea"></div>
-    <h2>Decaf Tea</h2>
-    <ul>
-      <li><strong>Decaf Ceylon</strong>, <em>Blended black</em>, Adagio Teas, $4.00/oz (about $0.32 per cup)<br>
-        <span class="desc">Classic black tea from the island of Sri Lanka. Clean, tangy aroma, medium body, with sweet citrus notes like mandarin, and refreshing astringency.</span></li>
-    </ul>
-  </section>
-  <section class="tea-section">
-    <div class="section-img"><img src="images/teabags.png" alt="Tea Bags (if you must)"></div>
-    <h2>Tea Bags (if you must)</h2>
-    <ul>
-      <li><strong>Vahdam Darjeeling Summer</strong>, <em>Himalayas</em>, Vahdam, $0.50/bag<br></li>
-      <li><strong>Vahdam English Breakfast</strong>, Vahdam, $0.50/bag<br></li>
-      <li><strong>Tealeaves English Breakfast</strong>, Tealeaves<br></li>
-      <li><strong>Decaf Harney & Sons Vanilla Comoro</strong> <span class="star">★</span>, Harney & Sons, $0.28/bag<br></li>
-      <li><strong>Decaf Metz Organic Blue Nile Chamomile</strong>, Metz<br></li>
-      <li><strong>Decaf Metz Organic Cascade Peppermint</strong>, Metz<br></li>
-      <li><strong>Decaf Tealeaves Purely Peppermint</strong>, Tealeaves<br></li>
-      <li><strong>Decaf Pink Lemon Ginger</strong>, <br></li>
-    </ul>
-  </section>
+        <span class="notes">Notes: Very strong cherry blossom notes; not to my liking.</span>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="tea-section" id="decaf">
+      <div class="section-inner clearfix">
+        <img src="images/decaf.png" alt="Decaf Tea" class="section-img" />
+        <div class="section-text">
+          <h2>Decaf Tea</h2>
+          <ul class="tea-list">
+      <li>
+        <span class="tea-name">Decaf Ceylon</span>
+        <span class="origin">Blended black</span>
+        <span class="price">$4.00/oz (about $0.32 per cup)</span>
+        <span class="desc">Classic black tea from the island of Sri Lanka. Clean, tangy aroma, medium body, with sweet citrus notes like mandarin, and refreshing astringency.</span>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="tea-section" id="tea_bags">
+      <div class="section-inner clearfix">
+        <img src="images/teabags.png" alt="Tea Bags" class="section-img" />
+        <div class="section-text">
+          <h2>Tea Bags (if you must)</h2>
+          <ul class="tea-list">
+      <li>
+        <span class="tea-name">Vahdam Darjeeling Summer</span>
+        <span class="origin">Himalayas</span>
+        <span class="price">$0.50/bag</span>
+      </li>
+      <li>
+        <span class="tea-name">Vahdam English Breakfast</span>
+        <span class="price">$0.50/bag</span>
+      </li>
+      <li>
+        <span class="tea-name">Tealeaves English Breakfast</span>
+      </li>
+      <li>
+        <span class="tea-name">Decaf Harney & Sons Vanilla Comoro <span class="star">&#9733;</span></span>
+        <span class="price">$0.28/bag</span>
+      </li>
+      <li>
+        <span class="tea-name">Decaf Metz Organic Blue Nile Chamomile</span>
+      </li>
+      <li>
+        <span class="tea-name">Decaf Metz Organic Cascade Peppermint</span>
+      </li>
+      <li>
+        <span class="tea-name">Decaf Tealeaves Purely Peppermint</span>
+      </li>
+      <li>
+        <span class="tea-name">Decaf Pink Lemon Ginger</span>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="tea-section" id="archived">
+      <div class="section-inner clearfix">
+        <img src="images/archivedtea.png" alt="Archived Teas" class="section-img" />
+        <div class="section-text">
+          <h2>Archived / None Left</h2>
+          <ul class="tea-list">
+        <li><span class="tea-name none">Daily Darjeeling</span></li>
+        <li><span class="tea-name none">"Mixiang" Honey Red Oolong</span> — Only had this in sample and now it is sold out. Should be on the lookout for the next iteration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <div class="archived-section">
-    <div class="section-img"><img src="images/archivedtea.png" alt="Archived Teas"></div>
-    <h2>Archived Teas (previously available)</h2>
-    <ul>
-      <li><strong>Daily Darjeeling</strong>, <em>Himalayas, Vahdam, $1.90/oz (about $0.15 per cup)</em> — Well rounded with some muscatel notes. This is a basic black tea. Nice with a straight steep or as a mixer to dampen some of the strong flavored teas.</li>
-      <li><strong>"Mixiang" Honey Red Oolong</strong> ★, <em>Taiwan, Beautiful Taiwan Tea, $11.50/oz (about $0.92 per cup)</em> — Red Oolong is something of a rage these days in Taiwan. It's made by fermenting the leaves as far as possible without becoming a black tea. It's distinguished by a nice reddish amber color to the tea and smooth drinkability.</li>
-    </ul>
-  </div>
-
-  <div class="footer">Last updated: 2026-05-27 · <a href="https://jdsai-code.github.io/cedartea/">Live site</a></div>
-
 </body>
 </html>

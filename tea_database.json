@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-27",
+    "lastUpdated": "2026-05-26",
     "site": "https://sites.google.com/view/cedarteasdc/tea",
     "legend": {
       "status": [
@@ -109,6 +109,106 @@
               "date": "2026-05-24",
               "change": "added to inventory",
               "note": "from Mountain Stream Teas order #15234, $15.50/50g"
+            }
+          ]
+        },
+        {
+          "id": "assam_chota_tingrai",
+          "name": "Assam Chota Tingrai Summer Black",
+          "origin": "Assam, India (Tinsukia district)",
+          "vendor": "Teabox",
+          "price_per_oz": 4.57,
+          "price_per_cup": 0.32,
+          "description": "Rich, full-bodied, brisk and malty black tea with cocoa undertones. From a fourth-generation family estate established in 1943 in Tinsukia district of Assam.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "100g ordered May 2026",
+          "history": [
+            {
+              "date": "2026-05-26",
+              "change": "added to inventory",
+              "note": "from Teabox order #US348848, $15.99/100g"
+            }
+          ]
+        },
+        {
+          "id": "darjeeling_upper_namring",
+          "name": "Darjeeling Upper Namring Spring Clonal Black",
+          "origin": "Darjeeling, India (Namring estate, est. 1855)",
+          "vendor": "Teabox",
+          "price_per_oz": 23.52,
+          "price_per_cup": 1.6,
+          "description": "Delicate, luminous limited-edition black tea from Namring estate. AV2 clonal cultivar balancing sweet floral elegance with a smooth, refreshing finish. Floral and geranium aroma with green apple peel; light-bodied and silken smooth with white lily, muskmelon, and crisp mineral finish.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {
+              "date": "2026-05-26",
+              "change": "added to inventory",
+              "note": "from Teabox order #US348848, $39.99/50g (limited edition)"
+            }
+          ]
+        },
+        {
+          "id": "assam_doomni_gold",
+          "name": "Assam Doomni Gold Summer Black",
+          "origin": "Assam, India (Doomni estate, Baksa district)",
+          "vendor": "Teabox",
+          "price_per_oz": 5.14,
+          "price_per_cup": 0.36,
+          "description": "Bold Assam with rich malty notes, sweet-honeyed aroma, and a touch of cocoa. Fine whole leaves with golden tips from Doomni Estate in the Baksa district. HACCP, ISO 9001, and Rainforest Alliance certified.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "100g ordered May 2026",
+          "history": [
+            {
+              "date": "2026-05-26",
+              "change": "added to inventory",
+              "note": "from Teabox order #US348848, $17.99/100g"
+            }
+          ]
+        },
+        {
+          "id": "darjeeling_jungpana_autumn",
+          "name": "Darjeeling Jungpana Autumn Chinary Black",
+          "origin": "Darjeeling, India (Jungpana estate, Kurseong Valley, est. 1899)",
+          "vendor": "Teabox",
+          "price_per_oz": 4.99,
+          "price_per_cup": 0.34,
+          "description": "Mellow autumnal Darjeeling from Jungpana estate, perched at 4,500 feet in Kurseong Valley. Medium-bodied with bright stone-fruity sweetness, subtle nutty nuances, and light cedar notes settling into a lingering, comforting finish.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {
+              "date": "2026-05-26",
+              "change": "added to inventory",
+              "note": "from Teabox order #US348848, $8.49/50g"
+            }
+          ]
+        },
+        {
+          "id": "darjeeling_makaibari_summer",
+          "name": "Darjeeling Makaibari Summer Clonal Black",
+          "origin": "Darjeeling, India (Makaibari estate, Kurseong, est. 1852)",
+          "vendor": "Teabox",
+          "price_per_oz": 12.35,
+          "price_per_cup": 0.84,
+          "description": "Lush, layered, and delicately sweet from the world's oldest tea estate (est. 1852), home to the first tea factory (built 1859). Pioneer of organic and biodynamic cultivation. Notes of sweet grapes, stone fruit, and chestnut weave into a smooth, lingering cup.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "50g ordered May 2026",
+          "history": [
+            {
+              "date": "2026-05-26",
+              "change": "added to inventory",
+              "note": "from Teabox order #US348848, $20.99/50g"
             }
           ]
         }
