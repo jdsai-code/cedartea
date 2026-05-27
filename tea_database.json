@@ -1,9 +1,14 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-24",
+    "lastUpdated": "2026-05-27",
     "site": "https://sites.google.com/view/cedarteasdc/tea",
     "legend": {
-      "status": ["in_stock", "low", "none", "archived"],
+      "status": [
+        "in_stock",
+        "low",
+        "none",
+        "archived"
+      ],
       "worth_ordering_again": "marked with * on the site"
     }
   },
@@ -16,8 +21,8 @@
           "name": "Farmer Chang's Honey Black",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Teas",
-          "price_per_oz": 7.50,
-          "price_per_cup": 0.60,
+          "price_per_oz": 7.5,
+          "price_per_cup": 0.6,
           "description": "Called \"Honey Fragrance\" black tea in Taiwan, this tea brews up notes of honey and cinnamon in a lighter but smooth and flavorful cup. Single steep 3-5 min.",
           "notes": "Strong and malty; very enjoyable but don't oversteep. Good only for a single steep.",
           "worth_ordering_again": false,
@@ -30,7 +35,7 @@
           "name": "Farmer Lee's Red Jade Black",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Teas",
-          "price_per_oz": 9.00,
+          "price_per_oz": 9.0,
           "price_per_cup": 0.72,
           "description": "Red Jade is in a class of its own and must be approached on what it brings to the table. Think of it as a fine dark Taiwanese Oolong. It's lighter in body and not as malty as Formosa Assam but sweeter, more delicate and with a cleaner finish.",
           "notes": "Particular taste hard to describe; may be a little off putting.",
@@ -58,8 +63,8 @@
           "name": "Dian Hong Black",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Teas",
-          "price_per_oz": 5.00,
-          "price_per_cup": 0.40,
+          "price_per_oz": 5.0,
+          "price_per_cup": 0.4,
           "description": "You'll find it to be a classic, delicious black tea - nice mouthfeel, a bit malty and only slightly dry.",
           "notes": "",
           "worth_ordering_again": false,
@@ -80,7 +85,11 @@
           "status": "in_stock",
           "quantity_notes": "50g ordered May 2026",
           "history": [
-            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $26.00/50g"}
+            {
+              "date": "2026-05-24",
+              "change": "added to inventory",
+              "note": "from Mountain Stream Teas order #15234, $26.00/50g"
+            }
           ]
         },
         {
@@ -89,14 +98,18 @@
           "origin": "Taiwan",
           "vendor": "Mountain Stream Teas",
           "price_per_oz": 8.79,
-          "price_per_cup": 0.70,
+          "price_per_cup": 0.7,
           "description": "A red tea (black tea) grown at alpine elevation in Taiwan, carrying natural honey notes from the high-mountain terroir. Light-bodied and sweet with a clean, lingering finish.",
           "notes": "",
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "50g ordered May 2026",
           "history": [
-            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.50/50g"}
+            {
+              "date": "2026-05-24",
+              "change": "added to inventory",
+              "note": "from Mountain Stream Teas order #15234, $15.50/50g"
+            }
           ]
         }
       ]
@@ -109,8 +122,8 @@
           "name": "Asian Beauty Oolong",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Teas",
-          "price_per_oz": 7.50,
-          "price_per_cup": 0.60,
+          "price_per_oz": 7.5,
+          "price_per_cup": 0.6,
           "description": "On the darker side of the Oolong spectrum is our Asian Beauty, a smooth, sweet, and fragrant Oolong - and Taiwan's most famous \"bug-bitten\" tea. This tea is only produced in the Summer when the leaves naturally acquire notes of honey and cinnamon from the little leaf hoppers.",
           "notes": "Very pleasant richer oolong. Benefits from a gongfu steeping but depletes pretty rapidly.",
           "worth_ordering_again": true,
@@ -123,7 +136,7 @@
           "name": "High Mountain Honey Oolong",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Teas",
-          "price_per_oz": 8.00,
+          "price_per_oz": 8.0,
           "price_per_cup": 0.64,
           "description": "Farmer Luo makes this small-batch, hand-made tea in the Alishan growing region only once per year in the Summer.",
           "notes": "A little lighter than expected. Great entry into oolongs if you're coming from heavy blacks. Benefits from a gongfu steeping.",
@@ -137,7 +150,7 @@
           "name": "Dong Ding Oolong - Heavy Roast",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Tea",
-          "price_per_oz": 8.00,
+          "price_per_oz": 8.0,
           "price_per_cup": 0.64,
           "description": "Dong Ding Oolong masterfully roasted by a friend of ours in Taichung. If you like roasted oolongs, this is a great choice! Make sure to rinse this one first.",
           "notes": "",
@@ -151,7 +164,7 @@
           "name": "2012 Roasted Tieguanyin",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Tea",
-          "price_per_oz": 7.00,
+          "price_per_oz": 7.0,
           "price_per_cup": 0.56,
           "description": "It has been said that this is a tea that is close to coffee. But who wants coffee? Other reviews have said it is like walking in a Redwood forest. Worth trying.",
           "notes": "",
@@ -165,7 +178,7 @@
           "name": "Honey Black Oolong (Spring 2026)",
           "origin": "Taiwan",
           "vendor": "Mountain Stream Teas",
-          "price_per_oz": 8.50,
+          "price_per_oz": 8.5,
           "price_per_cup": 0.68,
           "description": "A spring 2026 harvest black oolong from Taiwan. Processed with high oxidation to yield a naturally sweet honey aroma, rich and smooth body, and a warming finish.",
           "notes": "",
@@ -173,7 +186,11 @@
           "status": "in_stock",
           "quantity_notes": "50g ordered May 2026",
           "history": [
-            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.00/50g"}
+            {
+              "date": "2026-05-24",
+              "change": "added to inventory",
+              "note": "from Mountain Stream Teas order #15234, $15.00/50g"
+            }
           ]
         },
         {
@@ -182,14 +199,18 @@
           "origin": "Taiwan (Alishan)",
           "vendor": "Mountain Stream Teas",
           "price_per_oz": 8.79,
-          "price_per_cup": 0.70,
+          "price_per_cup": 0.7,
           "description": "A winter harvest milk oolong from the celebrated Alishan high mountain region. The Firefly varietal produces a naturally creamy, buttery character with floral high notes and a lingering sweet finish.",
           "notes": "",
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "50g ordered May 2026",
           "history": [
-            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.50/50g"}
+            {
+              "date": "2026-05-24",
+              "change": "added to inventory",
+              "note": "from Mountain Stream Teas order #15234, $15.50/50g"
+            }
           ]
         },
         {
@@ -198,14 +219,18 @@
           "origin": "Taiwan",
           "vendor": "Mountain Stream Teas",
           "price_per_oz": 8.79,
-          "price_per_cup": 0.70,
+          "price_per_cup": 0.7,
           "description": "A red oolong crafted from the large-leaf Assamica cultivar, processed with significant oxidation for a rich, full-bodied sweetness. Smooth and approachable with ripe fruit and honey notes.",
           "notes": "",
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "50g ordered May 2026",
           "history": [
-            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.50/50g"}
+            {
+              "date": "2026-05-24",
+              "change": "added to inventory",
+              "note": "from Mountain Stream Teas order #15234, $15.50/50g"
+            }
           ]
         },
         {
@@ -213,7 +238,7 @@
           "name": "Acacia Charcoal Roast Milk Oolong",
           "origin": "Taiwan",
           "vendor": "Mountain Stream Teas",
-          "price_per_oz": 8.50,
+          "price_per_oz": 8.5,
           "price_per_cup": 0.68,
           "description": "A milk oolong roasted over acacia charcoal, adding a warm, lightly toasty complexity to the naturally creamy base. Deep and satisfying, with excellent multi-steep character.",
           "notes": "",
@@ -221,7 +246,11 @@
           "status": "in_stock",
           "quantity_notes": "50g ordered May 2026",
           "history": [
-            {"date": "2026-05-24", "change": "added to inventory", "note": "from Mountain Stream Teas order #15234, $15.00/50g"}
+            {
+              "date": "2026-05-24",
+              "change": "added to inventory",
+              "note": "from Mountain Stream Teas order #15234, $15.00/50g"
+            }
           ]
         }
       ]
@@ -234,7 +263,7 @@
           "name": "Twisted Green",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Teas",
-          "price_per_oz": 7.00,
+          "price_per_oz": 7.0,
           "price_per_cup": 0.56,
           "description": "Aromatic, nutty and crisp! If you've never had fresh green tea straight from the fields you owe it to yourself to try this.",
           "notes": "A bit grassy; optimal steep still hasn't presented itself but would steer away from gongfu.",
@@ -248,7 +277,7 @@
           "name": "Green Tea of the Clouds",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Teas",
-          "price_per_oz": 9.50,
+          "price_per_oz": 9.5,
           "price_per_cup": 0.76,
           "description": "If you are a fan of our own Twisted Green, this \"Green Tea of the Clouds\" is highly recommended as it's similar in the inhale and taste profile but more delicate and even smoother.",
           "notes": "",
@@ -263,12 +292,54 @@
           "origin": "Himalayas",
           "vendor": "Vahdam",
           "price_per_oz": 3.86,
-          "price_per_cup": 0.30,
+          "price_per_cup": 0.3,
           "description": "High Elevation Grown Green Tea Leaves From Himalayas | Pure Unblended Single Origin Green Loose.",
           "notes": "A bit grassy, haven't found the good balance of steep time/water ratio.",
           "worth_ordering_again": false,
           "status": "in_stock",
           "quantity_notes": "",
+          "history": []
+        },
+        {
+          "id": "sencha_shin_ryoku",
+          "name": "Sencha Shin-ryoku",
+          "origin": "Honyama, Shizuoka, Japan",
+          "vendor": "Den's Tea",
+          "price_per_oz": 7.32,
+          "price_per_cup": 0.52,
+          "description": "Premium sencha grown at high elevation in the prestigious tea region of Honyama. First flush, Yabukita cultivar. Well-balanced between flavor and body with a natural sweetness.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "2 oz ordered March 2026",
+          "history": []
+        },
+        {
+          "id": "organic_fukamushi_sencha",
+          "name": "Organic Fukamushi Sencha",
+          "origin": "Kakegawa, Shizuoka, Japan",
+          "vendor": "Den's Tea",
+          "price_per_oz": 5.5,
+          "price_per_cup": 0.39,
+          "description": "Traditional deep-steamed (fukamushi) sencha from Kakegawa. Carefully deep steamed for mild, aromatic flavor. Grown under JAS organic certification. Mild with fresh grassy and earthy aromas.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "2 oz ordered March 2026",
+          "history": []
+        },
+        {
+          "id": "gyokuro_kin",
+          "name": "Gyokuro Kin",
+          "origin": "Asahina, Shizuoka, Japan",
+          "vendor": "Den's Tea",
+          "price_per_oz": 8.55,
+          "price_per_cup": 0.61,
+          "description": "A cup of affordable luxury. Shade-grown gyokuro from Asahina with the elegance of famed gyokuro teas. Gentle bitterness and umami mouthfeel that progressively becomes slightly sweet and astringent.",
+          "notes": "",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "2 oz ordered March 2026",
           "history": []
         }
       ]
@@ -281,7 +352,7 @@
           "name": "Moonlight Earl Grey",
           "origin": "Blended black",
           "vendor": "Adagio Teas",
-          "price_per_oz": 3.00,
+          "price_per_oz": 3.0,
           "price_per_cup": 0.24,
           "description": "Earl Grey 'cream' blend. Comforting flavors of vanilla and cream combine to soften the citrus notes of traditional Earl Grey.",
           "notes": "Consider softening with a basic black like daily darjeeling.",
@@ -295,7 +366,7 @@
           "name": "Cream",
           "origin": "Blended black",
           "vendor": "Adagio Teas",
-          "price_per_oz": 3.00,
+          "price_per_oz": 3.0,
           "price_per_cup": 0.24,
           "description": "Sweet, inviting and warm, with a delicate creamy consistency and aroma of fresh black tea. Pleasantly brisk and very refreshing.",
           "notes": "Consider softening with a basic black like daily darjeeling.",
@@ -317,6 +388,20 @@
           "status": "in_stock",
           "quantity_notes": "",
           "history": []
+        },
+        {
+          "id": "sakura_ryokucha",
+          "name": "Sakura Ryokucha",
+          "origin": "Shizuoka, Japan",
+          "vendor": "Den's Tea",
+          "price_per_oz": 5.88,
+          "price_per_cup": 0.42,
+          "description": "Seasonal blend of sencha, kukicha, sakura leaves and sakura flowers. Sakura flowers preserved in sugar for a subtle sweetness without affecting the tea flavor.",
+          "notes": "Very strong cherry blossom notes; not to my liking.",
+          "worth_ordering_again": false,
+          "status": "in_stock",
+          "quantity_notes": "2 oz ordered March 2026",
+          "history": []
         }
       ]
     },
@@ -332,7 +417,7 @@
           "name": "Decaf Ceylon",
           "origin": "Blended black",
           "vendor": "Adagio Teas",
-          "price_per_oz": 4.00,
+          "price_per_oz": 4.0,
           "price_per_cup": 0.32,
           "description": "Classic black tea from the island of Sri Lanka. Clean, tangy aroma, medium body, with sweet citrus notes like mandarin, and refreshing astringency.",
           "notes": "",
@@ -351,7 +436,7 @@
           "name": "Vahdam Darjeeling Summer",
           "origin": "Himalayas",
           "vendor": "Vahdam",
-          "price_per_bag": 0.50,
+          "price_per_bag": 0.5,
           "description": "",
           "notes": "",
           "worth_ordering_again": false,
@@ -364,7 +449,7 @@
           "name": "Vahdam English Breakfast",
           "origin": "",
           "vendor": "Vahdam",
-          "price_per_bag": 0.50,
+          "price_per_bag": 0.5,
           "description": "",
           "notes": "",
           "worth_ordering_again": false,
@@ -460,7 +545,7 @@
           "name": "Daily Darjeeling",
           "origin": "Himalayas",
           "vendor": "Vahdam",
-          "price_per_oz": 1.90,
+          "price_per_oz": 1.9,
           "price_per_cup": 0.15,
           "description": "Well rounded with some muscatel notes. This is a basic black tea. Nice with a straight steep or as a mixer to dampen some of the strong flavored teas.",
           "notes": "",
@@ -474,7 +559,7 @@
           "name": "\"Mixiang\" Honey Red Oolong",
           "origin": "Taiwan",
           "vendor": "Beautiful Taiwan Tea",
-          "price_per_oz": 11.50,
+          "price_per_oz": 11.5,
           "price_per_cup": 0.92,
           "description": "Red Oolong is something of a rage these days in Taiwan. It's made by fermenting the leaves as far as possible without becoming a black tea. It's distinguished by a nice reddish amber color to the tea and smooth drinkability.",
           "notes": "Only had this in sample and now it is sold out. Should be on the lookout for the next iteration.",

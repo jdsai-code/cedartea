@@ -6,149 +6,39 @@
   <title>Cedar Tea SDC — Tea Selection</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Georgia, serif; background: #fff; color: #222; }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      min-height: 340px;
-      background-image: url('images/topbanner.png');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      color: #fff;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.22);
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 3em;
-      font-weight: normal;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.45);
-    }
-    .hero-divider {
-      width: 80px;
-      height: 2px;
-      background: rgba(255,255,255,0.65);
-      margin: 10px auto 14px;
-    }
-    .hero p {
-      font-size: 1.05em;
-      margin-bottom: 5px;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-    }
-
-    /* Legend */
-    .legend {
-      background: #f9f5f0;
-      border-bottom: 1px solid #e8ddd0;
-      padding: 10px 40px;
-      font-size: 0.9em;
-      color: #666;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .legend span { display: inline-flex; align-items: center; gap: 6px; }
-
-    /* Sections */
-    .tea-section {
-      padding: 40px 40px 32px;
-      border-bottom: 1px solid #f0e8de;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .tea-section::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-    .section-img {
-      float: left;
-      width: 340px;
-      margin: 0 36px 20px 0;
-    }
-    .section-img img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-    h2 {
-      font-size: 1.8em;
-      font-weight: normal;
-      color: #b5652a;
-      margin-bottom: 16px;
-      font-style: italic;
-    }
-    ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 14px;
-      line-height: 1.5;
-      font-size: 0.95em;
-    }
-    li strong { color: #1a1a1a; }
-    .desc { color: #444; display: block; margin-top: 3px; padding-left: 14px; }
-    .notes { color: #7a5a2a; font-style: italic; display: block; margin-top: 3px; padding-left: 14px; font-size: 0.92em; }
-    .star { color: #c8860a; }
-    .tag { display: inline-block; font-size: 0.72em; font-weight: normal; padding: 1px 7px; border-radius: 10px; margin-left: 5px; vertical-align: middle; }
-    .tag.low { background: #fef3cd; color: #7a5a00; }
-    .empty { color: #999; font-style: italic; }
-
-    /* Archived */
-    .archived-section {
-      padding: 40px 40px 32px;
-      max-width: 1100px;
-      margin: 0 auto;
-      border-top: 2px solid #f0e8de;
-    }
-    .archived-section::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-    .archived-section h2 {
-      font-size: 1.4em;
-      color: #aaa;
-      margin-bottom: 16px;
-      font-style: italic;
-      font-weight: normal;
-    }
-    .archived-section ul { list-style: disc; padding-left: 20px; }
-    .archived-section li { margin-bottom: 10px; font-size: 0.9em; color: #888; }
-
-    .footer {
-      text-align: center;
-      padding: 24px;
-      font-size: 0.82em;
-      color: #aaa;
-      border-top: 1px solid #eee;
-    }
-    .footer a { color: #b5652a; }
-
-    @media (max-width: 700px) {
-      .section-img { float: none; width: 100%; margin: 0 0 20px 0; }
-      .section-img img { height: 200px; }
-      .tea-section, .archived-section { padding: 24px 20px; }
-      .hero h1 { font-size: 2em; }
-      .legend { padding: 10px 20px; }
+    body { font-family: Georgia, serif; background: #faf8f5; color: #2c2c2c; line-height: 1.6; }
+    .hero { position: relative; min-height: 340px; background-image: url('images/topbanner.png'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.22); }
+    .hero-inner { position: relative; z-index: 1; text-align: center; color: #fff; padding: 40px 20px; }
+    .hero-inner h1 { font-size: 2.6em; letter-spacing: 0.04em; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+    .hero-inner p { font-size: 1.1em; opacity: 0.9; margin: 4px 0; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+    .legend { background: #f0ebe3; border-bottom: 1px solid #d4c9b8; padding: 10px 32px; font-size: 0.9em; display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+    .tag.low { background: #e8a020; color: #fff; padding: 2px 7px; border-radius: 3px; font-size: 0.85em; }
+    main { max-width: 900px; margin: 0 auto; padding: 20px 24px 40px; }
+    .tea-section { margin-bottom: 44px; padding-bottom: 28px; border-bottom: 1px solid #e0d8cc; }
+    .tea-section::after { content: ''; display: table; clear: both; }
+    .section-img { float: left; width: 340px; margin: 0 36px 20px 0; }
+    .section-img img { width: 100%; height: 220px; object-fit: cover; border-radius: 4px; display: block; }
+    .tea-section h2 { font-size: 1.45em; color: #5c3d1e; margin-bottom: 12px; }
+    .tea-section ul { list-style: none; padding: 0; }
+    .tea-section li { margin-bottom: 14px; font-size: 0.97em; }
+    .star { color: #c8830a; }
+    .desc { display: block; color: #555; font-size: 0.93em; margin-top: 3px; font-style: italic; }
+    .notes { display: block; color: #888; font-size: 0.88em; margin-top: 2px; }
+    .empty { color: #888; font-style: italic; }
+    .archived-section { max-width: 900px; margin: 0 auto 40px; padding: 24px; background: #f5f0e8; border: 1px solid #ddd4c4; border-radius: 4px; }
+    .archived-section::after { content: ''; display: table; clear: both; }
+    .archived-section .section-img { float: left; width: 200px; margin: 0 28px 12px 0; }
+    .archived-section .section-img img { width: 100%; height: 140px; object-fit: cover; border-radius: 4px; }
+    .archived-section h2 { font-size: 1.2em; color: #7a6040; margin-bottom: 10px; }
+    .archived-section ul { list-style: disc; padding-left: 20px; color: #777; font-size: 0.9em; }
+    .archived-section li { margin-bottom: 8px; }
+    .footer { text-align: center; padding: 20px; color: #999; font-size: 0.85em; border-top: 1px solid #e0d8cc; }
+    .footer a { color: #7a6040; }
+    @media (max-width: 640px) {
+      .section-img { float: none; width: 100%; margin: 0 0 16px 0; }
+      .section-img img { height: 180px; }
+      .archived-section .section-img { float: none; width: 100%; }
     }
   </style>
 </head>
@@ -157,7 +47,6 @@
   <div class="hero">
     <div class="hero-inner">
       <h1>Tea Selection</h1>
-      <div class="hero-divider"></div>
       <p>See What You're Feeling, What You're Not</p>
       <p>★ Worth Ordering Again</p>
     </div>
@@ -165,11 +54,10 @@
 
   <div class="legend">
     <span>★ Worth Ordering Again</span>
-    <span><span class="tag low" style="font-size:0.9em">Running low</span> = almost gone</span>
+    <span><span class="tag low">Running low</span> = almost gone</span>
   </div>
 
   <main>
-
   <section class="tea-section">
     <div class="section-img"><img src="images/blacktea.png" alt="Traditional Black"></div>
     <h2>Traditional Black</h2>
@@ -181,16 +69,15 @@
         <span class="desc">Red Jade is in a class of its own and must be approached on what it brings to the table. Think of it as a fine dark Taiwanese Oolong. It's lighter in body and not as malty as Formosa Assam but sweeter, more delicate and with a cleaner finish.</span>
         <span class="notes">Notes: Particular taste hard to describe; may be a little off putting.</span></li>
       <li><strong>Himalayan Gold Black Tea</strong>, <em>Himalayas</em>, Vahdam, $6.37/oz (about $0.51 per cup)<br>
-        <span class="desc">Robust, Rich &amp; Flavory Loose Tea. Radiant blend from the Eastern Himalayas with shiny golden tips, high caffeine, and a delicate aroma.</span></li>
+        <span class="desc">Robust, Rich & Flavory Loose Tea. Radiant blend from the Eastern Himalayas with shiny golden tips, high caffeine, and a delicate aroma.</span></li>
       <li><strong>Dian Hong Black</strong>, <em>Taiwan</em>, Beautiful Taiwan Teas, $5.00/oz (about $0.40 per cup)<br>
         <span class="desc">You'll find it to be a classic, delicious black tea - nice mouthfeel, a bit malty and only slightly dry.</span></li>
       <li><strong>Chi Lai High Mountain Black</strong>, <em>Taiwan (Chi Lai Mountain, Hualien)</em>, Mountain Stream Teas, $14.74/oz (about $1.18 per cup)<br>
         <span class="desc">A high mountain black tea grown at elevation on Chi Lai Mountain in Hualien County. Clean, bright, and delicately sweet with a smooth mouthfeel and none of the bitterness of lowland blacks.</span></li>
       <li><strong>Alpine Honey Red</strong>, <em>Taiwan</em>, Mountain Stream Teas, $8.79/oz (about $0.70 per cup)<br>
-        <span class="desc">A red tea grown at alpine elevation in Taiwan, carrying natural honey notes from the high-mountain terroir. Light-bodied and sweet with a clean, lingering finish.</span></li>
+        <span class="desc">A red tea (black tea) grown at alpine elevation in Taiwan, carrying natural honey notes from the high-mountain terroir. Light-bodied and sweet with a clean, lingering finish.</span></li>
     </ul>
   </section>
-
   <section class="tea-section">
     <div class="section-img"><img src="images/oolong.png" alt="Traditional Oolong"></div>
     <h2>Traditional Oolong</h2>
@@ -215,7 +102,6 @@
         <span class="desc">A milk oolong roasted over acacia charcoal, adding a warm, lightly toasty complexity to the naturally creamy base. Deep and satisfying, with excellent multi-steep character.</span></li>
     </ul>
   </section>
-
   <section class="tea-section">
     <div class="section-img"><img src="images/greentea.png" alt="Green"></div>
     <h2>Green</h2>
@@ -228,9 +114,14 @@
       <li><strong>Himalayan Green</strong>, <em>Himalayas</em>, Vahdam, $3.86/oz (about $0.30 per cup)<br>
         <span class="desc">High Elevation Grown Green Tea Leaves From Himalayas | Pure Unblended Single Origin Green Loose.</span>
         <span class="notes">Notes: A bit grassy, haven't found the good balance of steep time/water ratio.</span></li>
+      <li><strong>Sencha Shin-ryoku</strong>, <em>Honyama, Shizuoka, Japan</em>, Den's Tea, $7.32/oz (about $0.52 per cup)<br>
+        <span class="desc">Premium sencha grown at high elevation in the prestigious tea region of Honyama. First flush, Yabukita cultivar. Well-balanced between flavor and body with a natural sweetness.</span></li>
+      <li><strong>Organic Fukamushi Sencha</strong>, <em>Kakegawa, Shizuoka, Japan</em>, Den's Tea, $5.50/oz (about $0.39 per cup)<br>
+        <span class="desc">Traditional deep-steamed (fukamushi) sencha from Kakegawa. Carefully deep steamed for mild, aromatic flavor. Grown under JAS organic certification. Mild with fresh grassy and earthy aromas.</span></li>
+      <li><strong>Gyokuro Kin</strong>, <em>Asahina, Shizuoka, Japan</em>, Den's Tea, $8.55/oz (about $0.61 per cup)<br>
+        <span class="desc">A cup of affordable luxury. Shade-grown gyokuro from Asahina with the elegance of famed gyokuro teas. Gentle bitterness and umami mouthfeel that progressively becomes slightly sweet and astringent.</span></li>
     </ul>
   </section>
-
   <section class="tea-section">
     <div class="section-img"><img src="images/flavored.png" alt="Flavored Tea"></div>
     <h2>Flavored Tea</h2>
@@ -244,15 +135,16 @@
       <li><strong>Masala Chai</strong>, <em>Blended black</em>, Adagio Teas, $3.33/oz (about $0.26 per cup)<br>
         <span class="desc">Premium Ceylon black tea with cinnamon, cardamom, cloves and ginger. In Indian culture, 'Masala' means 'a blend of spices'.</span>
         <span class="notes">Notes: Very heavy on the spice. Consider softening with a basic black like daily darjeeling and perhaps even (perish the thought) milk and a sweetener.</span></li>
+      <li><strong>Sakura Ryokucha</strong>, <em>Shizuoka, Japan</em>, Den's Tea, $5.88/oz (about $0.42 per cup)<br>
+        <span class="desc">Seasonal blend of sencha, kukicha, sakura leaves and sakura flowers. Sakura flowers preserved in sugar for a subtle sweetness without affecting the tea flavor.</span>
+        <span class="notes">Notes: Very strong cherry blossom notes; not to my liking.</span></li>
     </ul>
   </section>
-
   <section class="tea-section">
     <div class="section-img"><img src="images/whitetea.png" alt="White Tea"></div>
     <h2>White Tea</h2>
     <p class="empty">No current offerings — check back soon</p>
   </section>
-
   <section class="tea-section">
     <div class="section-img"><img src="images/decaf.png" alt="Decaf Tea"></div>
     <h2>Decaf Tea</h2>
@@ -261,22 +153,20 @@
         <span class="desc">Classic black tea from the island of Sri Lanka. Clean, tangy aroma, medium body, with sweet citrus notes like mandarin, and refreshing astringency.</span></li>
     </ul>
   </section>
-
   <section class="tea-section">
-    <div class="section-img"><img src="images/teabags.png" alt="Tea Bags"></div>
+    <div class="section-img"><img src="images/teabags.png" alt="Tea Bags (if you must)"></div>
     <h2>Tea Bags (if you must)</h2>
     <ul>
-      <li><strong>Vahdam Darjeeling Summer</strong>, <em>Himalayas</em>, Vahdam, $0.50/bag</li>
-      <li><strong>Vahdam English Breakfast</strong>, Vahdam, $0.50/bag</li>
-      <li><strong>Tealeaves English Breakfast</strong>, Tealeaves</li>
-      <li><strong>Decaf Harney &amp; Sons Vanilla Comoro</strong> <span class="star">★</span>, Harney &amp; Sons, $0.28/bag</li>
-      <li><strong>Decaf Metz Organic Blue Nile Chamomile</strong>, Metz</li>
-      <li><strong>Decaf Metz Organic Cascade Peppermint</strong>, Metz</li>
-      <li><strong>Decaf Tealeaves Purely Peppermint</strong>, Tealeaves</li>
-      <li><strong>Decaf Pink Lemon Ginger</strong></li>
+      <li><strong>Vahdam Darjeeling Summer</strong>, <em>Himalayas</em>, Vahdam, $0.50/bag<br></li>
+      <li><strong>Vahdam English Breakfast</strong>, Vahdam, $0.50/bag<br></li>
+      <li><strong>Tealeaves English Breakfast</strong>, Tealeaves<br></li>
+      <li><strong>Decaf Harney & Sons Vanilla Comoro</strong> <span class="star">★</span>, Harney & Sons, $0.28/bag<br></li>
+      <li><strong>Decaf Metz Organic Blue Nile Chamomile</strong>, Metz<br></li>
+      <li><strong>Decaf Metz Organic Cascade Peppermint</strong>, Metz<br></li>
+      <li><strong>Decaf Tealeaves Purely Peppermint</strong>, Tealeaves<br></li>
+      <li><strong>Decaf Pink Lemon Ginger</strong>, <br></li>
     </ul>
   </section>
-
   </main>
 
   <div class="archived-section">
@@ -288,7 +178,7 @@
     </ul>
   </div>
 
-  <div class="footer">Last updated: 2026-05-24 · <a href="https://jdsai-code.github.io/cedartea/">Live site</a></div>
+  <div class="footer">Last updated: 2026-05-27 · <a href="https://jdsai-code.github.io/cedartea/">Live site</a></div>
 
 </body>
 </html>
